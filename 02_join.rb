@@ -3,6 +3,21 @@
 #
 # You can only use the `#each` method on the input array
 
+def join(array, options = "")
+  result = ""
+
+  array.each do |thing|
+    if result == ""
+      result = "#{thing}"
+    else
+      result += "#{options}#{thing}"
+    end
+  end
+
+  result
+end
+
+
 
 require 'rspec'
 require 'rspec/autorun'
